@@ -1,272 +1,224 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Thomas Werner</title>
-    <meta charset="utf-8" />
-    <link
-      href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700"
-      rel="stylesheet"
-    />
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="css/5grid/init.js?use=mobile,desktop,1000px"></script>
-    <script src="js/init.js"></script>
-    <noscript>
-      <link rel="stylesheet" href="css/5grid/core.css" />
-      <link rel="stylesheet" href="css/5grid/core-desktop.css" />
-      <link rel="stylesheet" href="css/5grid/core-1200px.css" />
-      <link rel="stylesheet" href="css/5grid/core-noscript.css" />
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="css/style-desktop.css" />
-    </noscript>
-  </head>
-  <body>
-    <nav id="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="current">Projects</a></li>
-        <!-- <li><a href="blog.html">Blog</a></li> -->
-        <li><a href="imprint.html">Imprint</a></li>
-      </ul>
-    </nav>
-    <div class="wrapper wrapper-style3">
-      <article id="portfolio">
-        <header>
-          <h2>Projects</h2>
-          <span
-            >These are some of the hobby projects I've been working on.</span
-          >
-        </header>
-        <div class="5grid-layout">
-          <div class="row">
-            <div class="12u"></div>
+
+<head>
+  <title>Thomas Werner</title>
+  <meta charset="utf-8" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="css/5grid/init.js?use=mobile,desktop,1000px"></script>
+  <script src="js/init.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="css/5grid/core.css" />
+    <link rel="stylesheet" href="css/5grid/core-desktop.css" />
+    <link rel="stylesheet" href="css/5grid/core-1200px.css" />
+    <link rel="stylesheet" href="css/5grid/core-noscript.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-desktop.css" />
+  </noscript>
+</head>
+
+<body>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="current">Projects</a></li>
+      <!-- <li><a href="blog.html">Blog</a></li> -->
+      <li><a href="imprint.html">Imprint</a></li>
+    </ul>
+  </nav>
+  <div class="wrapper wrapper-style3">
+    <article id="portfolio">
+      <header>
+        <h2>Projects</h2>
+        <span>These are some of the hobby projects I've been working on.</span>
+      </header>
+      <div class="5grid-layout">
+        <div class="row">
+          <div class="12u"></div>
+        </div>
+        <div class="row">
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://timetracker.thomas-werner.engineer/"><img src="images/timetracker.png" alt=""
+                  class="image-project" /></a>
+              <h3>
+                <a href="https://timetracker.thomas-werner.engineer/">TimeTracker</a>
+              </h3>
+              <p>
+                Time tracking application that I wrote for my personal use. The
+                frontend is an Aurelia web application. The backend is a serverless
+                application using Azure Functions and CosmosDB for data persistence.
+              </p>
+            </article>
           </div>
-          <div class="row">
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://www.rauschzeit.de"
-                  ><img
-                    src="images/RZ_OnAir-150x150.jpg"
-                    alt=""
-                    class="image-project"
-                /></a>
-                <h3>
-                  <a href="https://www.rauschzeit.de">Rauschzeit.de</a>
-                </h3>
-                <p>
-                  RauschZeit is a special music program on Radio ZuSa and has
-                  been running every two weeks on Thursdays from 21:00h - 23:00h
-                  since May 1997. I technically modernized the website and
-                  supported the redesign.
-                </p>
-              </article>
-            </div>
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/huddeldaddel/gitlab-team-dashboard">
-                  <img
-                    src="images/gitlab-dashboard.png"
-                    alt=""
-                    class="image-project"
-                  />
-                </a>
-                <h3>
-                  <a
-                    href="https://github.com/huddeldaddel/gitlab-team-dashboard"
-                    >Gitlab-Team-Dashboard</a
-                  >
-                </h3>
-                <p>
-                  A dashboard that displays the status of development projects
-                  managed in GitLab (on-premise or in the cloud). The dashboard
-                  is designed to be displayed on a TV screen or some large
-                  display.
-                </p>
-              </article>
-            </div>
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/Retro-Carnage-Team/retro-carnage"
-                  ><img
-                    src="images/104321045.jpeg"
-                    alt=""
-                    class="image-project"
-                    style="object-fit: cover"
-                /></a>
-                <h3>
-                  <a href="https://github.com/Retro-Carnage-Team/retro-carnage"
-                    >Retro-Carnage</a
-                  >
-                </h3>
-                <p>
-                  A work-in-progress project building a modern multidirectional
-                  scrolling shooter. Once finished, Retro-Carnage is going to be
-                  a worthy successor of classic video games like Ikari Warriors,
-                  War Zone, or Dogs of War.
-                </p>
-              </article>
-            </div>
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://www.rauschzeit.de"><img src="images/RZ_OnAir-150x150.jpg" alt=""
+                  class="image-project" /></a>
+              <h3>
+                <a href="https://www.rauschzeit.de">Rauschzeit.de</a>
+              </h3>
+              <p>
+                RauschZeit is a special music program on Radio ZuSa and has
+                been running every two weeks on Thursdays from 21:00h - 23:00h
+                since May 1997. I technically modernized the website and
+                supported the redesign.
+              </p>
+            </article>
           </div>
-          <div class="row">
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/huddeldaddel/mailbackup"
-                  ><img src="images/mail.png" alt="" class="image-project"
-                /></a>
-                <h3>
-                  <a href="https://github.com/huddeldaddel/mailbackup"
-                    >MailBackup</a
-                  >
-                </h3>
-                <p>
-                  Versatile commandline tool to download emails from an IMAP
-                  server and store them as EML files on your computer.
-                </p>
-              </article>
-            </div>
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/huddeldaddel/salesforce-backup"
-                  ><img
-                    src="images/salesforce.png"
-                    alt=""
-                    class="image-project"
-                    style="object-fit: none"
-                /></a>
-                <h3>
-                  <a href="https://github.com/huddeldaddel/salesforce-backup"
-                    >Salesforce-Backup</a
-                  >
-                </h3>
-                <p>
-                  This tool performs automated backups of SalesForce.com export
-                  data and stores it locally or to either AWS or Azure.
-                </p>
-              </article>
-            </div>
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/huddeldaddel/breakout-go"
-                  ><img
-                    src="images/breakout-go.jpg"
-                    alt=""
-                    class="image-project"
-                    style="object-fit: cover"
-                /></a>
-                <h3>
-                  <a href="https://github.com/huddeldaddel/breakout-go"
-                    >Breakout-Go</a
-                  >
-                </h3>
-                <p>
-                  Breakout-GO is a Breakout clone for the ODROID-GO Game Kit
-                  written in C++.
-                </p>
-              </article>
-            </div>
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/huddeldaddel/gitlab-team-dashboard">
+                <img src="images/gitlab-dashboard.png" alt="" class="image-project" />
+              </a>
+              <h3>
+                <a href="https://github.com/huddeldaddel/gitlab-team-dashboard">Gitlab-Team-Dashboard</a>
+              </h3>
+              <p>
+                A dashboard that displays the status of development projects
+                managed in GitLab (on-premise or in the cloud). The dashboard
+                is designed to be displayed on a TV screen or some large
+                display.
+              </p>
+            </article>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/Retro-Carnage-Team/retro-carnage"><img src="images/104321045.jpeg" alt=""
+                  class="image-project" style="object-fit: cover" /></a>
+              <h3>
+                <a href="https://github.com/Retro-Carnage-Team/retro-carnage">Retro-Carnage</a>
+              </h3>
+              <p>
+                A work-in-progress project building a modern multidirectional
+                scrolling shooter. Once finished, Retro-Carnage is going to be
+                a worthy successor of classic video games like Ikari Warriors,
+                War Zone, or Dogs of War.
+              </p>
+            </article>
           </div>
-          <div class="row">
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/huddeldaddel/nbhexedit"
-                  ><img src="images/hex.png" alt="" class="image-project"
-                /></a>
-                <h3>
-                  <a href="https://github.com/huddeldaddel/nbhexedit"
-                    >Hex editor Plugin for NetBeans</a
-                  >
-                </h3>
-                <p>
-                  This project provided a hex editor for the NetBeans IDE with
-                  text preview in different encodings.
-                </p>
-              </article>
-            </div>
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/huddeldaddel/mongonb"
-                  ><img
-                    src="images/MongoDB_Logomark_ForestGreen.png"
-                    alt=""
-                    class="image-project"
-                    style="object-fit: none"
-                /></a>
-                <h3>
-                  <a href="https://github.com/huddeldaddel/mongonb"
-                    >MongoDB Plugin for NetBeans IDE</a
-                  >
-                </h3>
-                <p>
-                  This project provided a MongoDB integration in NetBeans when
-                  better tools where missing.
-                </p>
-              </article>
-            </div>
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/huddeldaddel/nbbeanshell"
-                  ><img
-                    src="images/beanshell.png"
-                    alt=""
-                    class="image-project"
-                    style="object-fit: none"
-                /></a>
-                <h3>
-                  <a href="https://github.com/huddeldaddel/nbbeanshell"
-                    >BeanShell Plugin for NetBeans IDE</a
-                  >
-                </h3>
-                <p>
-                  This project provided an interactive shell (based on
-                  BeanShell) in NetBeans before JShell existed.
-                </p>
-              </article>
-            </div>
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/huddeldaddel/mailbackup"><img src="images/mail.png" alt=""
+                  class="image-project" /></a>
+              <h3>
+                <a href="https://github.com/huddeldaddel/mailbackup">MailBackup</a>
+              </h3>
+              <p>
+                Versatile commandline tool to download emails from an IMAP
+                server and store them as EML files on your computer.
+              </p>
+            </article>
           </div>
-          <div class="row">
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/huddeldaddel/grab2web"
-                  ><img src="images/grab2web.png" alt="" class="image-project"
-                /></a>
-                <h3>
-                  <a href="https://github.com/huddeldaddel/grab2web"
-                    >Grab2Web</a
-                  >
-                </h3>
-                <p>
-                  This was one of my hobby projects back in 2004. The tools
-                  captures images from a webcam and uploads them to a FTP
-                  server.
-                </p>
-              </article>
-            </div>
-            <div class="4u">
-              <article class="box box-style2">
-                <a href="https://github.com/huddeldaddel/klickus"
-                  ><img
-                    src="images/klickus.png"
-                    alt=""
-                    class="image-project"
-                    style="object-fit: scale-down"
-                /></a>
-                <h3>
-                  <a href="https://github.com/huddeldaddel/klickus">Klickus</a>
-                </h3>
-                <p>A Clickomania clone written in Delphi</p>
-              </article>
-            </div>
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/huddeldaddel/salesforce-backup"><img src="images/salesforce.png" alt=""
+                  class="image-project" style="object-fit: none" /></a>
+              <h3>
+                <a href="https://github.com/huddeldaddel/salesforce-backup">Salesforce-Backup</a>
+              </h3>
+              <p>
+                This tool performs automated backups of SalesForce.com export
+                data and stores it locally or to either AWS or Azure.
+              </p>
+            </article>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/huddeldaddel/breakout-go"><img src="images/breakout-go.jpg" alt=""
+                  class="image-project" style="object-fit: cover" /></a>
+              <h3>
+                <a href="https://github.com/huddeldaddel/breakout-go">Breakout-Go</a>
+              </h3>
+              <p>
+                Breakout-GO is a Breakout clone for the ODROID-GO Game Kit
+                written in C++.
+              </p>
+            </article>
+          </div>
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/huddeldaddel/nbhexedit"><img src="images/hex.png" alt=""
+                  class="image-project" /></a>
+              <h3>
+                <a href="https://github.com/huddeldaddel/nbhexedit">Hex editor Plugin for NetBeans</a>
+              </h3>
+              <p>
+                This project provided a hex editor for the NetBeans IDE with
+                text preview in different encodings.
+              </p>
+            </article>
+          </div>
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/huddeldaddel/mongonb"><img src="images/MongoDB_Logomark_ForestGreen.png"
+                  alt="" class="image-project" style="object-fit: none" /></a>
+              <h3>
+                <a href="https://github.com/huddeldaddel/mongonb">MongoDB Plugin for NetBeans IDE</a>
+              </h3>
+              <p>
+                This project provided a MongoDB integration in NetBeans when
+                better tools where missing.
+              </p>
+            </article>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/huddeldaddel/nbbeanshell"><img src="images/beanshell.png" alt=""
+                  class="image-project" style="object-fit: none" /></a>
+              <h3>
+                <a href="https://github.com/huddeldaddel/nbbeanshell">BeanShell Plugin for NetBeans IDE</a>
+              </h3>
+              <p>
+                This project provided an interactive shell (based on
+                BeanShell) in NetBeans before JShell existed.
+              </p>
+            </article>
+          </div>
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/huddeldaddel/grab2web"><img src="images/grab2web.png" alt=""
+                  class="image-project" /></a>
+              <h3>
+                <a href="https://github.com/huddeldaddel/grab2web">Grab2Web</a>
+              </h3>
+              <p>
+                This was one of my hobby projects back in 2004. The tools
+                captures images from a webcam and uploads them to a FTP
+                server.
+              </p>
+            </article>
+          </div>
+          <div class="4u">
+            <article class="box box-style2">
+              <a href="https://github.com/huddeldaddel/klickus"><img src="images/klickus.png" alt=""
+                  class="image-project" style="object-fit: scale-down" /></a>
+              <h3>
+                <a href="https://github.com/huddeldaddel/klickus">Klickus</a>
+              </h3>
+              <p>A Clickomania clone written in Delphi</p>
+            </article>
           </div>
         </div>
-      </article>
-    </div>
-    <div class="wrapper wrapper-style4">
-      <article id="contact">
-        <footer>
-          <p id="copyright">
-            &copy; 2023 | Design: <a href="http://html5up.net/">HTML5 Up!</a>
-          </p>
-        </footer>
-      </article>
-    </div>
-  </body>
+      </div>
+    </article>
+  </div>
+  <div class="wrapper wrapper-style4">
+    <article id="contact">
+      <footer>
+        <p id="copyright">
+          &copy; 2023 | Design: <a href="http://html5up.net/">HTML5 Up!</a>
+        </p>
+      </footer>
+    </article>
+  </div>
+</body>
+
 </html>
