@@ -1,113 +1,582 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Thomas Werner</title>
-    <meta charset="utf-8" />
-    <link
-      href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700"
-      rel="stylesheet"
-    />
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="css/5grid/init.js?use=mobile,desktop,1000px"></script>
-    <script src="js/init.js"></script>
-    <noscript>
-      <link rel="stylesheet" href="css/5grid/core.css" />
-      <link rel="stylesheet" href="css/5grid/core-desktop.css" />
-      <link rel="stylesheet" href="css/5grid/core-1200px.css" />
-      <link rel="stylesheet" href="css/5grid/core-noscript.css" />
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="css/style-desktop.css" />
-    </noscript>
-  </head>
-  <body>
-    <nav id="nav">
-      <ul>
-        <li><a href="index.html" class="current">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <!-- <li><a href="blog.html">Blog</a></li> -->
-        <li><a href="imprint.html">Imprint</a></li>
-      </ul>
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script async type="text/javascript" src="js/bulma.js"></script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar is-link is-fixed-top">
+        <div class="navbar-brand">
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="#about">
+                    <span class="icon">
+                        <i class="fas fa-info"></i>
+                    </span>
+                    <span>About</span>
+                </a>
+                <a class="navbar-item" href="#projects">
+                    <span class="icon">
+                        <i class="fas fa-th-list"></i>
+                    </span>
+                    <span>Projects</span>
+                </a>
+            </div>
+        </div>
     </nav>
-    <div class="wrapper wrapper-style1 wrapper-first">
-      <article class="5grid-layout" id="top">
-        <div class="row">
-          <div class="4u">
-            <span class="me image image-full"
-              ><img src="images/me.jpg" alt=""
-            /></span>
-          </div>
-          <div class="8u">
-            <header>
-              <h1>Hi. I'm <strong>Thomas Werner</strong>.</h1>
-            </header>
-            <p>
-              I'm an Enterprise Architect at NewYorker, a family guy, and a
-              retro games enthusiast. This is my private homepage where I share
-              my thoughts and notes and experiment with web-related things.
-            </p>
-          </div>
+
+    <!-- Header -->
+    <section class="hero is-link is-fullheight is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container">Hello! I am
+                <h1 class="title is-1">
+                    Thomas Werner
+                </h1>
+                <h2 class="subtitle is-3">
+                    Enterprise Architect
+                </h2>
+            </div>
         </div>
-      </article>
-    </div>
-    <div class="wrapper wrapper-style2">
-      <article id="work">
-        <header>
-          <h2>Find me on...</h2>
-        </header>
-        <div class="5grid-layout">
-          <div class="row">
-            <div class="4u">
-              <section class="box box-style1">
-                <a href="https://www.linkedin.com/in/t-werner">
-                  <span class="image image-centered"
-                    ><img src="images/linkedin.png" alt=""
-                  /></span>
-                </a>
-                <h3>
-                  <a href="https://www.linkedin.com/in/t-werner">LinkedIn</a>
-                </h3>
-              </section>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <!-- Title -->
+        <div class="section-heading">
+            <h3 class="title is-2">About Me</h3>
+            <div class="container">
+                <p>
+                    I'm an Enterprise Architect with more than 20 years of experience in software development, a family
+                    guy, retro games enthusiast, and I love coffee.<br />
+                    This is my private homepage where I share my thoughts and notes and experiment with web-related
+                    technologies.
+                </p>
             </div>
-            <div class="4u">
-              <section class="box box-style1">
-                <a href="https://www.github.com/huddeldaddel">
-                  <span class="image image-centered"
-                    ><img src="images/github.png" alt=""
-                  /></span>
-                </a>
-                <h3>
-                  <a href="https://www.github.com/huddeldaddel">GitHub</a>
-                </h3>
-              </section>
-            </div>
-            <div class="4u">
-              <section class="box box-style1">
-                <a
-                  href="https://www.youtube.com/channel/UCzZqwKAbXmn_azXxBgwWS3g"
-                >
-                  <span class="image image-centered"
-                    ><img src="images/youtube.png" alt="" /></span
-                ></a>
-                <h3>
-                  <a
-                    href="https://www.youtube.com/channel/UCzZqwKAbXmn_azXxBgwWS3g"
-                    >YouTube</a
-                  >
-                </h3>
-              </section>
-            </div>
-          </div>
         </div>
-      </article>
-    </div>
-    <div class="wrapper wrapper-style4">
-      <article id="contact">
-        <footer>
-          <p id="copyright">
-            &copy; 2023 | Design: <a href="http://html5up.net/">HTML5 Up!</a>
-          </p>
-        </footer>
-      </article>
-    </div>
-  </body>
+
+        <div class="columns has-same-height is-gapless">
+            <div class="column">
+                <!-- Profile -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="title is-4">Profile</h3>
+
+                        <div class="content">
+                            <table class="table-profile">
+                                <tr>
+                                    <th colspan="1"></th>
+                                    <th colspan="2"></th>
+                                </tr>
+                                <tr>
+                                    <td>Address:</td>
+                                    <td>Hintere Str. 16<br />38268 Lengede</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone:</td>
+                                    <td>+49 170 / 2324952</td>
+                                </tr>
+                                <tr>
+                                    <td>Email:</td>
+                                    <td>webmaster@thomas-werner.engineer</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="buttons has-addons is-centered">
+                            <a href="https://github.com/huddeldaddel" class="button is-link">Github</a>
+                            <a href="https://www.linkedin.com/in/t-werner" class="button is-link">LinkedIn</a>
+                            <a href="https://www.youtube.com/channel/UCzZqwKAbXmn_azXxBgwWS3g"
+                                class="button is-link">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <!-- Profile picture -->
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="images/tom_20230801.jpg" alt="That's me">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <!-- Skills -->
+                <div class="card">
+                    <div class="card-content skills-content">
+                        <h3 class="title is-4">Skills</h3>
+                        <div class="content">
+
+                            <article class="media">
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Software Architecture:</strong>
+                                            <br>
+                                            <progress class="progress is-primary" value="95" max="100"></progress>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="media">
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Java:</strong>
+                                            <br>
+                                            <progress class="progress is-primary" value="90" max="100"></progress>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="media">
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Go:</strong>
+                                            <br>
+                                            <progress class="progress is-primary" value="75" max="100"></progress>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="media">
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>C#:</strong>
+                                            <br>
+                                            <progress class="progress is-primary" value="75" max="100"></progress>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="media">
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Databases</strong>
+                                            <br>
+                                            <progress class="progress is-primary" value="75" max="100"></progress>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-heading">
+                <h3 class="title is-2">Projects</h3>
+                <h4 class="subtitle is-5">
+                    To learn new technologies and methods, I mostly use small hobby projects in which I try out the
+                    respective technology in practice. Over time, this has resulted in a small collection of tools and
+                    games. I would like to present some of them here. Some of these tools I use on a daily basis, others
+                    are fun "curiosities".
+                </h4>
+            </div>
+            <br>
+
+            <div class="container portfolio-container">
+                <div class="columns">
+                    <div class="column is-4">
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>TimeTracker</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2023</span>
+                                        <span class="tag is-default">C#</span>
+                                        <span class="tag is-default">Azure</span>
+                                        <span class="tag is-default">Azure Functions</span>
+                                        <span class="tag is-default">CosmosDB</span>
+                                        <span class="tag is-default">JavaScript</span>
+                                        <span class="tag is-default">Aurelia</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/timetracker.png" alt="TimeTracker screenshot">
+                                </figure>
+                                <p>
+                                    Time tracking application that I wrote for my personal use. The frontend is an
+                                    Aurelia web application. The backend is a serverless application using Azure
+                                    Functions and CosmosDB for data persistence.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://timetracker.thomas-werner.engineer/" class="card-footer-item">Visit
+                                    Website</a>
+                                <a href="https://github.com/huddeldaddel/TimeTracker" class="card-footer-item">Source
+                                    Code Backend</a>
+                                <a href="https://github.com/huddeldaddel/TimeTrackerUI" class="card-footer-item">Source
+                                    Code Frontend</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>Gitlab-Team-Dashboard</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2023</span>
+                                        <span class="tag is-default">JavaScript</span>
+                                        <span class="tag is-default">Aurelia</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/gitlab-dashboard.png" alt="Gitlab-Team-Dashboard screenshot">
+                                </figure>
+                                <p>
+                                    A dashboard that displays the status of development projects managed in GitLab
+                                    (on-premise or in the cloud). The dashboard is designed to be displayed on a TV
+                                    screen or some large display.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://gitlab-dashboard.thomas-werner.engineer/"
+                                    class="card-footer-item">Visit Website</a>
+                                <a href="https://github.com/huddeldaddel/gitlab-team-dashboard"
+                                    class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>Rauschzeit.de</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2023</span>
+                                        <span class="tag is-default">Jekyll</span>
+                                        <span class="tag is-default">PowerShell</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/RZ_OnAir-150x150.jpg" alt="Rauschzeit logo">
+                                </figure>
+                                <p>
+                                    RauschZeit is a special music program on Radio ZuSa and has been running every two
+                                    weeks on Thursdays from 21:00h - 23:00h since May 1997. I technically modernized the
+                                    website and supported the redesign.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://www.rauschzeit.de/" class="card-footer-item">Visit Website</a>
+                                <a href="https://github.com/Rauschzeit/Website" class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>Retro-Carnage</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2022</span>
+                                        <span class="tag is-default">Go</span>
+                                        <span class="tag is-default">OpenGL</span>
+                                        <span class="tag is-default">Pixel</span>
+                                        <span class="tag is-default">Java</span>
+                                        <span class="tag is-default">NetBeans RCP</span>
+
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/104321045.jpeg" alt="Retro-Carnage logo">
+                                </figure>
+                                <p>
+                                    A work-in-progress project building a modern multidirectional scrolling shooter.
+                                    Once finished, Retro-Carnage is going to be a worthy successor of classic video
+                                    games like Ikari Warriors, War Zone, or Dogs of War.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://github.com/Retro-Carnage-Team/retro-carnage"
+                                    class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>Salesforce-Backup</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2020</span>
+                                        <span class="tag is-default">C#</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/salesforce.png" alt="Salesforce.com logo">
+                                </figure>
+                                <p>
+                                    This tool performs automated backups of SalesForce.com export data and stores it
+                                    locally or to either AWS or Azure.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://github.com/huddeldaddel/salesforce-backup"
+                                    class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+                    </div>
+
+
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>Paulix</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2019</span>
+                                        <span class="tag is-default">JavaScript</span>
+                                        <span class="tag is-default">React</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/paulix.jpeg" alt="Retro-Carnage logo">
+                                </figure>
+                                <p>
+                                    Paulix is a simple JavaScript based Jump And Run game, written for and dedicated to
+                                    my niece and nephew.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://github.com/huddeldaddel/paulix" class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>Breakout-Go</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2019</span>
+                                        <span class="tag is-default">C++</span>
+                                        <span class="tag is-default">Arduino</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/breakout-go.jpg" alt="Screenshot">
+                                </figure>
+                                <p>
+                                    Breakout-GO is a Breakout clone for the ODROID-GO Game Kit written in C++.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://github.com/huddeldaddel/breakout-go" class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>MailBackup</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2018</span>
+                                        <span class="tag is-default">Java</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/mail.png" alt="Placeholder">
+                                </figure>
+                                <p>
+                                    Versatile commandline tool to download emails from an IMAP server and store them as
+                                    EML files on your computer.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://github.com/huddeldaddel/mailbackup" class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>MongoDB Plugin for NetBeans IDE</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2014</span>
+                                        <span class="tag is-default">Java</span>
+                                        <span class="tag is-default">MongoDB</span>
+                                        <span class="tag is-default">NetBeans RCP</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/MongoDB_Logomark_ForestGreen.png" alt="MongoDB logo">
+                                </figure>
+                                <p>
+                                    This project provided a MongoDB integration in NetBeans when better tools where
+                                    missing.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://github.com/huddeldaddel/mongonb" class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+                    </div>
+
+
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>Hex editor Plugin for NetBeans</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2012</span>
+                                        <span class="tag is-default">Java</span>
+                                        <span class="tag is-default">NetBeans RCP</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/hex.png" alt="Placeholder">
+                                </figure>
+                                <p>
+                                    This project provided a hex editor for the NetBeans IDE with text preview in
+                                    different encodings.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://github.com/huddeldaddel/nbhexedit" class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>BeanShell Plugin for NetBeans IDE</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2012</span>
+                                        <span class="tag is-default">Java</span>
+                                        <span class="tag is-default">BeanShell</span>
+                                        <span class="tag is-default">NetBeans RCP</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/beanshell.png" alt="BeanShell logo">
+                                </figure>
+                                <p>
+                                    This project provided an interactive Java shell (based on BeanShell) in NetBeans
+                                    before JShell existed.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://github.com/huddeldaddel/nbbeanshell" class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>Grab2Web</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2004</span>
+                                        <span class="tag is-default">Delphi</span>
+                                        <span class="tag is-default">DirectX</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/grab2web.png" alt="Grab2Web screenshot">
+                                </figure>
+                                <p>
+                                    This was one of my hobby projects back in 2004. The tools captures images from a
+                                    webcam and uploads them to a FTP server.
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://www.thomas-werner.engineer/images/grab2web.png"
+                                    class="card-footer-item">Source Code</a>
+                            </footer>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span>Klickus</span>
+                                    <span class="is-pulled-right">
+                                        <span class="tag is-default">2003</span>
+                                        <span class="tag is-default">Delphi</span>
+                                    </span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <figure class="image">
+                                    <img src="images/klickus.png" alt="Klickus screenshot">
+                                </figure>
+                                <p>
+                                    A Clickomania clone written in Delphi
+                                </p>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="https://github.com/huddeldaddel/klickus" class="card-footer-item">Source
+                                    Code</a>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
 </html>
