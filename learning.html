@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-    <script async type="text/javascript" src="js/bulma.js"></script>    
+    <script async type="text/javascript" src="js/bulma.js"></script>
 </head>
 
-<body>
+<body id="app">
     <!-- Navigation bar -->
     <nav class="navbar is-link is-fixed-top">
         <div class="navbar-brand">
@@ -42,7 +42,7 @@
 
                 <a class="navbar-item" href="learning.html">
                     <span class="icon">
-                        <i class="fas fa-th-book"></i>
+                        <i class="fas fa-book"></i>
                     </span>
                     <span>Learning Path</span>
                 </a>
@@ -58,12 +58,11 @@
             <div class="container">
                 <p>
                     Software engineering is a young engineering discipline that is evolving incredibly fast. Anyone
-                    who takes their job as a software architect seriously will therefore have to embark on intensive and
-                    lifelong learning. Here I take up the idea of my colleague <a href="https://maksim.mk/">Maksim
+                    who takes their job as a software architect seriously will therefore have to embark on intensive
+                    and lifelong learning. Here I take up the idea of my colleague <a href="https://maksim.mk/">Maksim
                         Simonovski</a> and document the progress of my efforts in this area. Since I have moved
-                    frequently
-                    in the last years and significantly reduced my book collection several times in the process, this
-                    list is increasingly incomplete the older the entries are.
+                    frequently in the last years and significantly reduced my book collection several times in the
+                    process, this list is increasingly incomplete the older the entries are.
                 </p>
             </div>
         </div>
@@ -78,7 +77,7 @@
                         <div class="field">
                             <div class="control">
                                 <label class="checkbox">
-                                    <input type="checkbox" value="book" checked>
+                                    <input type="checkbox" value="book" v-model="book">
                                     Books
                                 </label>
                             </div>
@@ -89,7 +88,7 @@
                         <div class="field">
                             <div class="control">
                                 <label class="checkbox">
-                                    <input type="checkbox" value="certification" checked>
+                                    <input type="checkbox" value="certification" v-model="certification">
                                     Certifications
                                 </label>
                             </div>
@@ -98,7 +97,7 @@
                         <div class="field">
                             <div class="control">
                                 <label class="checkbox">
-                                    <input type="checkbox" value="course" checked>
+                                    <input type="checkbox" value="course" v-model="course">
                                     Online Courses
                                 </label>
                             </div>
@@ -107,7 +106,7 @@
                         <div class="field">
                             <div class="control">
                                 <label class="checkbox">
-                                    <input type="checkbox" value="training" checked>
+                                    <input type="checkbox" value="training" v-model="training">
                                     Trainings
                                 </label>
                             </div>
@@ -119,23 +118,69 @@
                 <!-- Topics -->
                 <div class="card">
                     <div class="card-content">
-                        <h3 class="title is-4">Topics</h3>
-                        Architecture
-                        C#
-                        Java
-                        Kotlin
+                        <h3 class="title is-4">Topics</h3>                        
 
-                        <div id="app">{{ message }}</div>
-                        <script>
-                            const { createApp } = Vue;
-                            createApp({
-                                data() {
-                                    return {
-                                        message: 'Hello Vue!',
-                                    }
-                                },
-                            }).mount('#app')
-                        </script>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="architecture">
+                                Architecture
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="azure">
+                                Azure
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="cloudComputing">
+                                Cloud Computing
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="csharp">
+                                C#
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="cybersecurity">
+                                Cybersecurity
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="english">
+                                English
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="java">
+                                Java
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="kotlin">
+                                Kotlin
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="management">
+                                Management
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="other">
+                                Other
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="softwareEngineering">
+                                Software Engineering
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="training" v-model="togaf">
+                                TOGAF
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,7 +191,7 @@
     <section class="section" id="portfolio">
         <div class="container">
 
-            <article class="panel is-link">
+            <article class="panel is-link" v-if="certification && cybersecurity">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -160,7 +205,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link">
+            <article class="panel is-link" v-if="certification && (architecture || togaf)">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -174,7 +219,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link">
+            <article class="panel is-link" v-if="certification && softwareEngineering">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -188,7 +233,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link">
+            <article class="panel is-link" v-if="certification && (azure || cloudComputing)">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -202,7 +247,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link">
+            <article class="panel is-link" v-if="certification && architecture">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -216,7 +261,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link">
+            <article class="panel is-link" v-if="certification && management">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -230,7 +275,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link">
+            <article class="panel is-link" v-if="certification && english">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -244,7 +289,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link">
+            <article class="panel is-link" v-if="certification && (java || softwareEngineering)">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -258,7 +303,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link">
+            <article class="panel is-link" v-if="certification && other">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -274,6 +319,32 @@
 
         </div>
     </section>
+
+    <script>
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    architecture: true,
+                    azure: true,
+                    book: true,
+                    certification: true,
+                    cloudComputing: true,
+                    csharp: true,
+                    course: true,
+                    cybersecurity: true,
+                    english: true,
+                    java: true,
+                    kotlin: true,
+                    management: true,
+                    other: true,
+                    softwareEngineering: true,
+                    togaf: true,
+                    training: true,
+                }
+            },
+        }).mount('#app')
+    </script>
 
 </body>
 
