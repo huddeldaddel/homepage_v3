@@ -102,15 +102,6 @@
                                 </label>
                             </div>
                         </div>
-
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="training" v-model="training">
-                                    Trainings
-                                </label>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -122,7 +113,7 @@
 
                         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
                             <label class="checkbox">
-                                <input type="checkbox" value="architecture" v-model="architecture">
+                                <input type="checkbox" v-model="architecture">
                                 Architecture
                             </label>
 
@@ -132,57 +123,67 @@
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="cloudComputing" v-model="cloudComputing">
+                                <input type="checkbox" v-model="cloudComputing">
                                 Cloud Computing
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="csharp" v-model="csharp">
+                                <input type="checkbox" v-model="csharp">
                                 C#
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="cybersecurity" v-model="cybersecurity">
+                                <input type="checkbox" v-model="cybersecurity">
                                 Cybersecurity
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="english" v-model="english">
+                                <input type="checkbox" v-model="english">
                                 English
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="java" v-model="java">
+                                <input type="checkbox" v-model="java">
                                 Java
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="kotlin" v-model="kotlin">
+                                <input type="checkbox" v-model="javascript">
+                                Java
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="kotlin">
                                 Kotlin
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="management" v-model="management">
+                                <input type="checkbox" v-model="management">
                                 Management
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="other" v-model="other">
+                                <input type="checkbox" v-model="other">
                                 Other
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="softwareEngineering" v-model="softwareEngineering">
+                                <input type="checkbox" v-model="softwareEngineering">
                                 Software Engineering
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="testing" v-model="testing">
+                                <input type="checkbox" v-model="testing">
                                 Testing
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="togaf" v-model="togaf">
+                                <input type="checkbox" v-model="togaf">
+                                TOGAF
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="webDevelopment">
                                 TOGAF
                             </label>
                         </div>
@@ -336,7 +337,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && management">
+            <article class="panel is-warning" v-if="course && (javascript || webDevelopment)">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -350,7 +351,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && management">
+            <article class="panel is-warning" v-if="course && cloudComputing">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -364,7 +365,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && (architecture || java)">
+            <article class="panel is-warning" v-if="course && (architecture || java || softwareEngineering)">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -392,7 +393,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && management">
+            <article class="panel is-warning" v-if="course && (csharp || webDevelopment)">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -430,7 +431,7 @@
                 return {
                     architecture: true,
                     azure: true,
-                    book: true,
+                    book: false,
                     certification: true,
                     cloudComputing: true,
                     csharp: true,
@@ -438,13 +439,14 @@
                     cybersecurity: true,
                     english: true,
                     java: true,
+                    javascript: true,
                     kotlin: true,
                     management: true,
                     other: true,
                     softwareEngineering: true,
                     testing: true,
-                    togaf: true,
-                    training: true,
+                    togaf: true,                    
+                    webDevelopment: true
                 }
             },
         }).mount('#app')
