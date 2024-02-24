@@ -122,62 +122,67 @@
 
                         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="architecture">
+                                <input type="checkbox" value="architecture" v-model="architecture">
                                 Architecture
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="azure">
+                                <input type="checkbox" value="azure" v-model="azure">
                                 Azure
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="cloudComputing">
+                                <input type="checkbox" value="cloudComputing" v-model="cloudComputing">
                                 Cloud Computing
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="csharp">
+                                <input type="checkbox" value="csharp" v-model="csharp">
                                 C#
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="cybersecurity">
+                                <input type="checkbox" value="cybersecurity" v-model="cybersecurity">
                                 Cybersecurity
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="english">
+                                <input type="checkbox" value="english" v-model="english">
                                 English
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="java">
+                                <input type="checkbox" value="java" v-model="java">
                                 Java
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="kotlin">
+                                <input type="checkbox" value="kotlin" v-model="kotlin">
                                 Kotlin
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="management">
+                                <input type="checkbox" value="management" v-model="management">
                                 Management
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="other">
+                                <input type="checkbox" value="other" v-model="other">
                                 Other
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="softwareEngineering">
+                                <input type="checkbox" value="softwareEngineering" v-model="softwareEngineering">
                                 Software Engineering
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" value="training" v-model="togaf">
+                                <input type="checkbox" value="testing" v-model="testing">
+                                Testing
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="togaf" v-model="togaf">
                                 TOGAF
                             </label>
                         </div>
@@ -275,6 +280,34 @@
                 </div>
             </article>
 
+            <article class="panel is-warning" v-if="course && cloudComputing">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-Q1K9DJ9J.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Learn to Develop for Cloud with Pivotal Cloud Foundry</div>
+                        <div>Completed in 2018</div>
+                        <div>Udemy</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="course && (java || testing)">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-DZKC1YN5.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">REST API Automation With REST Assured</div>
+                        <div>Completed in 2018</div>
+                        <div>Udemy</div>
+                    </div>
+                </div>
+            </article>
+
             <article class="panel is-link" v-if="certification && english">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
@@ -285,6 +318,20 @@
                         <div class="is-size-2">English CEFR level C1</div>
                         <div>Certified since 2017</div>
                         <div>Issued by British Council</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="course && (architecture || java)">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-SJG16B67.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Fluent API Design - A Crash Course</div>
+                        <div>Completed in 2017</div>
+                        <div>Udemy</div>
                     </div>
                 </div>
             </article>
@@ -339,6 +386,7 @@
                     management: true,
                     other: true,
                     softwareEngineering: true,
+                    testing: true,
                     togaf: true,
                     training: true,
                 }
