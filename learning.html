@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thomas Werner</title>
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script async type="text/javascript" src="js/bulma.js"></script>
+</head>
+
+<body id="app">
+    <!-- Navigation bar -->
+    <nav class="navbar is-link is-fixed-top">
+        <div class="navbar-brand">
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="index.html#about">
+                    <span class="icon">
+                        <i class="fas fa-info"></i>
+                    </span>
+                    <span>About</span>
+                </a>
+                <a class="navbar-item" href="index.html#projects">
+                    <span class="icon">
+                        <i class="fas fa-th-list"></i>
+                    </span>
+                    <span>Projects</span>
+                </a>
+
+                <a class="navbar-item" href="learning.html">
+                    <span class="icon">
+                        <i class="fas fa-book"></i>
+                    </span>
+                    <span>Learning Path</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Filter -->
+    <section class="section" id="about">
+        <!-- Description -->
+        <div class="section-heading">
+            <h3 class="title is-2">Learning path</h3>
+            <div class="container">
+                <p>
+                    Software engineering is a young engineering discipline that is evolving incredibly fast. Anyone
+                    who takes their job as a software architect seriously will therefore have to embark on intensive
+                    and lifelong learning. Here I take up the idea of my colleague <a href="https://maksim.mk/">Maksim
+                        Simonovski</a> and document the progress of my efforts in this area. Since I have moved
+                    frequently in the last years and significantly reduced my book collection several times in the
+                    process, this list is increasingly incomplete the older the entries are.
+                </p>
+            </div>
+        </div>
+
+        <div class="columns has-same-height is-gapless">
+            <div class="column is-one-fifth">
+                <!-- Types -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="title is-4">Filter by type</h3>
+
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="book">
+                                        Books
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="certification">
+                                        Certifications
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="course">
+                                        Online Courses
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-one-fifth">
+                <!-- Year -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="title is-4">Filter by year</h3>
+
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2024">
+                                        2024
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2023">
+                                        2023
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2022">
+                                        2022
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2021">
+                                        2021
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2020">
+                                        2020
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2019">
+                                        2019
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2018">
+                                        2018
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2017">
+                                        2017
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2016">
+                                        2016
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2015">
+                                        2015
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2014">
+                                        2014
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2013">
+                                        2013
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2012">
+                                        2012
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2011">
+                                        2011
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2010">
+                                        2010
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <!-- Topics -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="title is-4">Filter by topic</h3>
+
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="architecture">
+                                Architecture
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" value="azure" v-model="azure">
+                                Azure
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="cloudComputing">
+                                Cloud Computing
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="csharp">
+                                C#
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="cybersecurity">
+                                Cybersecurity
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="ddd">
+                                Domain Driven Design
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="english">
+                                English
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="erp">
+                                ERP systems
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="java">
+                                Java
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="javascript">
+                                JavaScript / TypeScript
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="kotlin">
+                                Kotlin
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="management">
+                                Management
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="ax">
+                                Microsoft Dynamics AX
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="other">
+                                Other
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="projectManagement">
+                                Project Management
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="scrum">
+                                Scrum
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="softwareEngineering">
+                                Software Engineering
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="testing">
+                                Testing
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="togaf">
+                                TOGAF
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="uml">
+                                UML
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="webDevelopment">
+                                Web Development
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" id="portfolio">
+        <div class="container">
+
+            <!-- 2024 -->
+
+            <article class="panel is-link" v-if="y2024 && certification && cybersecurity">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_ISC2_CC.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Certified in Cybersecurity</div>
+                        <div>Certified since 2024</div>
+                        <div>Issued by ISC2</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2023 -->
+
+            <article class="panel is-link" v-if="y2023 && certification && (architecture || togaf)">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_TOGAF.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">TOGAF 9 Certified</div>
+                        <div>Certified since 2023</div>
+                        <div>Issued by The Open Group</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-link" v-if="y2023 && certification && softwareEngineering">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_green_software.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Green Software for Practitioners (LFC131)</div>
+                        <div>Certified since 2023</div>
+                        <div>Issued by The Linux Foundation</div>
+                    </div>
+                </div>
+            </article>            
+
+            <article class="panel is-primary" v-if="y2023 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103415.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Architecture Blueprints</div>
+                        <div class="is-size-4"> Ein Leitfaden zur Konstruktion von Softwaresystemen mit Java Spring, .NET, ADF, Forms und SOA</div>
+                        <div class="has-text-grey">Authors:  Daniel Liebhart, Guido Schmutz, Marcel Lattmann, Markus Heinisch, Michael Könings, Mischa Kölliker, Perry Pakull, Peter Welkenbach</div>
+                    </div>
+                </div>
+            </article>              
+
+            <!-- 2022 -->
+
+            <article class="panel is-link" v-if="y2022 && certification && (azure || cloudComputing)">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_azure_fundamentals.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Microsoft Certified: Azure Fundamentals</div>
+                        <div>Certified since 2022</div>
+                        <div>Issued by Microsoft</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2022 && book && csharp">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103405.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">C# 10 and .NET 6</div>
+                        <div class="is-size-4">Modern Cross-Platform Development</div>
+                        <div class="has-text-grey">Authors:  Mark J. Price</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-primary" v-if="y2022 && book && (ax || erp)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103446.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Microsoft Dynamics AX 2009 Development Cookbook</div>
+                        <div class="is-size-4"></div>
+                        <div class="has-text-grey">Authors: Mindaugas Pocius</div>
+                    </div>
+                </div>
+            </article>  
+
+            <!-- 2021 -->
+
+            <article class="panel is-primary" v-if="y2021 && book && (architecture || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102024.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Programming Web Services with SOAP</div>
+                        <div class="is-size-4">Building Distributed Applications</div>
+                        <div class="has-text-grey">Authors: Doug Tidwell, James Snell, Pavel Kulchenko</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-primary" v-if="y2021 && book && (ax || erp)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103438.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Microsoft Dynamics Ax 2009 Programming</div>
+                        <div class="is-size-4">Getting Started: Get To Grips With Synamics AX 2009 Development Quickly To Build Reliable And Robust Business Applications</div>
+                        <div class="has-text-grey">Authors: Erlend Dalen</div>
+                    </div>
+                </div>
+            </article>              
+
+            <article class="panel is-primary" v-if="y2021 && book && (projectManagement || scrum)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101820.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Agile Project Management with Scrum</div>
+                        <div class="is-size-4"></div>
+                        <div class="has-text-grey">Authors: Ken Schwaber</div>
+                    </div>
+                </div>
+            </article>  
+
+            <!-- 2020 -->                   
+
+            <article class="panel is-primary" v-if="y2020 && book && (architecture || ddd || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101957.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Domain-Driven Design</div>
+                        <div class="is-size-4">Tackling Complexity in the Heart of Software</div>
+                        <div class="has-text-grey">Authors: Eric Evans</div>                        
+                    </div>
+                </div>
+            </article>               
+
+            <article class="panel is-primary" v-if="y2020 && book && (javascript || webDevelopment)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102032.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Aurelia in Action</div>
+                        <div class="is-size-4"></div>
+                        <div class="has-text-grey">Authors: Sean Hunter</div>                        
+                    </div>
+                </div>
+            </article>                  
+
+            <article class="panel is-primary" v-if="y2020 && book && (architecture || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101646.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Agile Modeling</div>
+                        <div class="is-size-4">Effective Practices for eXtreme Programming and the Unified Process</div>
+                        <div class="has-text-grey">Authors: Scott W. Ambler</div>                        
+                    </div>
+                </div>
+            </article>    
+
+            <article class="panel is-primary" v-if="y2020 && book && (architecture || java || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101837.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">API-Design</div>
+                        <div class="is-size-4">Praxishandbuch für Java- und Webservice-Entwickler</div>
+                        <div class="has-text-grey">Authors: Kai Spichale</div>
+                    </div>
+                </div>
+            </article>  
+
+            <!-- 2019 -->
+
+            <article class="panel is-primary" v-if="y2019 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101913.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Evaluating Software Architectures</div>
+                        <div class="is-size-4">Methods and Case Studies</div>
+                        <div class="has-text-grey">Authors: Paul Clements, Rick Kazman, Mark Klein</div>
+                    </div>
+                </div>
+            </article>              
+
+            <article class="panel is-primary" v-if="y2019 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101846.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Knigge für Softwarearchitekten</div>
+                        <div class="is-size-4"></div>
+                        <div class="has-text-grey">Authors: Peter Hruschka, Gernot Starke</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-link" v-if="y2019 && certification && architecture">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_CPSA-F.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Certified Professional for Software Architecture</div>
+                        <div>Certified since 2019</div>
+                        <div>Issued by ISAQB</div>
+                    </div>
+                </div>
+            </article>            
+
+            <article class="panel is-primary" v-if="y2019 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102013.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Zertifizierung für Softwarearchitekten</div>
+                        <div class="is-size-4">Ihr Weg zur iSAQB CPSA-F-Prüfung</div>
+                        <div class="has-text-grey">Authors: Gernot Starke, Peter Hruschka</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-primary" v-if="y2019 && book && java">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101725.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Spring Boot 2</div>
+                        <div class="is-size-4">Moderne Softwareentwicklung mit Spring 5</div>
+                        <div class="has-text-grey">Authors: Michael Simons</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-primary" v-if="y2019 && book && (architecture || ddd || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101904.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Domain-Driven Design kompakt</div>
+                        <div class="is-size-4">Effective Practices for eXtreme Programming and the Unified Process</div>
+                        <div class="has-text-grey">Authors: Vaughn Vernon</div>                        
+                    </div>
+                </div>
+            </article>         
+
+            <!-- 2018 -->          
+
+            <article class="panel is-primary" v-if="y2018 && book && management">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101803.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Agile Unternehmen</div>
+                        <div class="is-size-4">Veränderungsprozesse gestalten, agile Prinzipien verankern, Selbstorganisation und neue Führungsstile etablieren</div>
+                        <div class="has-text-grey">Authors: Jürgen Hoffmann, Stefan Roock</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-link" v-if="y2018 && certification && management">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_green_belt.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Six Sigma Green Belt</div>
+                        <div>Certified since 2018</div>
+                        <div>Issued by Institute for Leadership Excellence</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2018 && book && java">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101828.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Java 9</div>
+                        <div class="is-size-4">Die Neuerungen: Syntax- und API-Erweiterungen und Modularisierung im Überblick</div>
+                        <div class="has-text-grey">Authors: Michael Inden</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-warning" v-if="y2018 && course && cloudComputing">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-Q1K9DJ9J.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Learn to Develop for Cloud with Pivotal Cloud Foundry</div>
+                        <div>Completed in 2018</div>
+                        <div>Udemy</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="y2018 && course && management">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-SPBP0CRU.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Management Skills: Essentials for The New Manager</div>
+                        <div>Completed in 2018</div>
+                        <div>Udemy</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2018 && book && (management || other)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101855.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Barbarians to Bureaucrats</div>
+                        <div class="is-size-4">Corporate Life Cycle Strategies: Corporate Life Cycle Strategies</div>
+                        <div class="has-text-grey">Authors: Lawrence M. Miller</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="y2018 && course && (java || testing)">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-DZKC1YN5.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">REST API Automation With REST Assured</div>
+                        <div>Completed in 2018</div>
+                        <div>Udemy</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2017 -->
+
+            <article class="panel is-link" v-if="y2017 && certification && english">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_IELTS.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">English CEFR level C1</div>
+                        <div>Certified since 2017</div>
+                        <div>Issued by British Council</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2017 && book && cloudComputing">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101602.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Serverless Computing</div>
+                        <div class="is-size-4">in der AWS Cloud</div>
+                        <div class="has-text-grey">Authors: Niko Köbler</div>                        
+                    </div>
+                </div>
+            </article>            
+
+            <article class="panel is-warning" v-if="y2017 && course && (javascript || webDevelopment)">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-W69MZC3W.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Advanced React and Redux</div>
+                        <div>Completed in 2017</div>
+                        <div>Udemy</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="y2017 && course && cloudComputing">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-VLZLFAL5.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">AWS Certified Developer - Associate</div>
+                        <div>Completed in 2017</div>
+                        <div>Udemy</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="y2017 && course && (architecture || java || softwareEngineering)">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-SJG16B67.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Fluent API Design - A Crash Course</div>
+                        <div>Completed in 2017</div>
+                        <div>Udemy</div>
+                    </div>
+                </div>
+            </article>            
+
+            <article class="panel is-warning" v-if="y2017 && course && (csharp || webDevelopment)">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/course_UC-ZUX4F444.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Pro ASP.NET Core 1.1 MVC</div>
+                        <div>Completed in 2017</div>
+                        <div>Udemy</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2016 -->
+
+            <!-- 2015 -->
+
+            <article class="panel is-primary" v-if="y2015 && book && (architecture || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101656.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Design Patterns</div>
+                        <div class="is-size-4">Elements of Reusable Object-Oriented Software</div>
+                        <div class="has-text-grey">Authors: Richard Helm, Erich Gamma, John Vlissides, Ralph Johnson</div>                        
+                    </div>
+                </div>
+            </article>    
+
+            <!-- 2014 -->
+
+            <article class="panel is-primary" v-if="y2014 && book && softwareEngineering">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101709.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Usability Engineering kompakt</div>
+                        <div class="is-size-4">Benutzbare Produkte gezielt entwickeln</div>
+                        <div class="has-text-grey">Authors: Michael Richter</div>
+                    </div>
+                </div>
+            </article>    
+            
+            <!-- 2013 -->
+
+            <!-- 2012 -->
+
+            <article class="panel is-link" v-if="y2012 && certification && (java || softwareEngineering)">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_NetBeans.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">NetBeans Platform Certified Engineer</div>
+                        <div>Certified since 2012</div>
+                        <div>Issued by Sun Microsystems</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2011 -->
+            
+            <article class="panel is-primary" v-if="y2011 && book && (uml || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101717.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">UML 2 kompakt</div>
+                        <div class="is-size-4">mit Checklisten</div>
+                        <div class="has-text-grey">Authors: Heide Balzert</div>
+                    </div>
+                </div>
+            </article>    
+
+            <!-- 2010 -->
+
+            <article class="panel is-link" v-if="y2010 && certification && other">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_ihk.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">AEVO-Training Instructors Aptitude (CCI)</div>
+                        <div>Certified since 2010</div>
+                        <div>Issued by IHK Braunschweig</div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <script>
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    architecture: true,
+                    ax: true,
+                    azure: true,
+                    book: true,
+                    certification: true,
+                    cloudComputing: true,
+                    csharp: true,
+                    course: true,
+                    cybersecurity: true,
+                    ddd: true,
+                    english: true,
+                    erp: true,
+                    java: true,
+                    javascript: true,
+                    kotlin: true,
+                    management: true,
+                    other: true,
+                    projectManagement: true, 
+                    scrum: true,
+                    softwareEngineering: true,
+                    testing: true,
+                    togaf: true,
+                    uml: true,
+                    webDevelopment: true,
+                    y2024: true,
+                    y2023: true,
+                    y2022: true,
+                    y2021: true,
+                    y2020: false,
+                    y2019: false,
+                    y2018: false,
+                    y2017: false,
+                    y2016: false,
+                    y2015: false,
+                    y2014: false,
+                    y2013: false,
+                    y2012: false,
+                    y2011: false,
+                    y2010: false,
+                }
+            },
+        }).mount('#app')
+    </script>
+
+</body>
+
+</html>
