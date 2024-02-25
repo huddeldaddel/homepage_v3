@@ -68,48 +68,195 @@
         </div>
 
         <div class="columns has-same-height is-gapless">
-            <div class="column is-one-third">
+            <div class="column is-one-fifth">
                 <!-- Types -->
                 <div class="card">
                     <div class="card-content">
-                        <h3 class="title is-4">Type</h3>
+                        <h3 class="title is-4">Filter by type</h3>
 
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="book" v-model="book">
-                                    Books
-                                </label>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="book">
+                                        Books
+                                    </label>
+                                </div>
                             </div>
-                        </div>
 
-
-
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="certification" v-model="certification">
-                                    Certifications
-                                </label>
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="certification">
+                                        Certifications
+                                    </label>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="course" v-model="course">
-                                    Online Courses
-                                </label>
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="course">
+                                        Online Courses
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="column is-one-fifth">
+                <!-- Year -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="title is-4">Filter by year</h3>
+
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2024">
+                                        2024
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2023">
+                                        2023
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2022">
+                                        2022
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2021">
+                                        2021
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2020">
+                                        2020
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2019">
+                                        2019
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2018">
+                                        2018
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2017">
+                                        2017
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2016">
+                                        2016
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2015">
+                                        2015
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2014">
+                                        2014
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2013">
+                                        2013
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2012">
+                                        2012
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2011">
+                                        2011
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="y2010">
+                                        2010
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="column">
                 <!-- Topics -->
                 <div class="card">
                     <div class="card-content">
-                        <h3 class="title is-4">Topics</h3>                        
+                        <h3 class="title is-4">Filter by topic</h3>
 
                         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
                             <label class="checkbox">
@@ -197,7 +344,7 @@
     <section class="section" id="portfolio">
         <div class="container">
 
-            <article class="panel is-link" v-if="certification && cybersecurity">
+            <article class="panel is-link" v-if="y2024 && certification && cybersecurity">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -211,7 +358,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link" v-if="certification && (architecture || togaf)">
+            <article class="panel is-link" v-if="y2023 && certification && (architecture || togaf)">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -225,7 +372,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link" v-if="certification && softwareEngineering">
+            <article class="panel is-link" v-if="y2023 && certification && softwareEngineering">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -239,7 +386,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link" v-if="certification && (azure || cloudComputing)">
+            <article class="panel is-link" v-if="y2022 && certification && (azure || cloudComputing)">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -253,7 +400,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link" v-if="certification && architecture">
+            <article class="panel is-link" v-if="y2019 && certification && architecture">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -267,7 +414,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link" v-if="certification && management">
+            <article class="panel is-link" v-if="y2018 && certification && management">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -281,7 +428,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && cloudComputing">
+            <article class="panel is-warning" v-if="y2018 && course && cloudComputing">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -295,7 +442,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && management">
+            <article class="panel is-warning" v-if="y2018 && course && management">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -309,7 +456,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && (java || testing)">
+            <article class="panel is-warning" v-if="y2018 && course && (java || testing)">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -323,7 +470,7 @@
                 </div>
             </article>
 
-            <article class="panel is-link" v-if="certification && english">
+            <article class="panel is-link" v-if="y2017 && certification && english">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -337,7 +484,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && (javascript || webDevelopment)">
+            <article class="panel is-warning" v-if="y2017 && course && (javascript || webDevelopment)">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -351,7 +498,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && cloudComputing">
+            <article class="panel is-warning" v-if="y2017 && course && cloudComputing">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -365,7 +512,7 @@
                 </div>
             </article>
 
-            <article class="panel is-warning" v-if="course && (architecture || java || softwareEngineering)">
+            <article class="panel is-warning" v-if="y2017 && course && (architecture || java || softwareEngineering)">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -377,23 +524,9 @@
                         <div>Udemy</div>
                     </div>
                 </div>
-            </article>
+            </article>            
 
-            <article class="panel is-link" v-if="certification && (java || softwareEngineering)">
-                <p class="panel-heading">Certification</p>
-                <div class="panel-block columns">
-                    <div class="column is-one-third">
-                        <img src="images/cert_NetBeans.png">
-                    </div>
-                    <div class="column">
-                        <div class="is-size-2">NetBeans Platform Certified Engineer</div>
-                        <div>Certified since 2012</div>
-                        <div>Issued by Sun Microsystems</div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="panel is-warning" v-if="course && (csharp || webDevelopment)">
+            <article class="panel is-warning" v-if="y2017 && course && (csharp || webDevelopment)">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -407,7 +540,21 @@
                 </div>
             </article>
 
-            <article class="panel is-link" v-if="certification && other">
+            <article class="panel is-link" v-if="y2012 && certification && (java || softwareEngineering)">
+                <p class="panel-heading">Certification</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_NetBeans.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">NetBeans Platform Certified Engineer</div>
+                        <div>Certified since 2012</div>
+                        <div>Issued by Sun Microsystems</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-link" v-if="y2010 && certification && other">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
@@ -431,7 +578,7 @@
                 return {
                     architecture: true,
                     azure: true,
-                    book: false,
+                    book: true,
                     certification: true,
                     cloudComputing: true,
                     csharp: true,
@@ -445,8 +592,23 @@
                     other: true,
                     softwareEngineering: true,
                     testing: true,
-                    togaf: true,                    
-                    webDevelopment: true
+                    togaf: true,
+                    webDevelopment: true,
+                    y2024: true,
+                    y2023: true,
+                    y2022: true,
+                    y2021: true,
+                    y2020: false,
+                    y2019: false,
+                    y2018: false,
+                    y2017: false,
+                    y2016: false,
+                    y2015: false,
+                    y2014: false,
+                    y2013: false,
+                    y2012: false,
+                    y2011: false,
+                    y2010: false,
                 }
             },
         }).mount('#app')
