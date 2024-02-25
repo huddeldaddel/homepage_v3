@@ -295,6 +295,11 @@
                             </label>
 
                             <label class="checkbox">
+                                <input type="checkbox" v-model="erp">
+                                ERP systems
+                            </label>
+
+                            <label class="checkbox">
                                 <input type="checkbox" v-model="java">
                                 Java
                             </label>
@@ -312,6 +317,11 @@
                             <label class="checkbox">
                                 <input type="checkbox" v-model="management">
                                 Management
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="ax">
+                                Microsoft Dynamics AX
                             </label>
 
                             <label class="checkbox">
@@ -351,7 +361,7 @@
 
                             <label class="checkbox">
                                 <input type="checkbox" v-model="webDevelopment">
-                                TOGAF
+                                Web Development
                             </label>
                         </div>
                     </div>
@@ -408,7 +418,21 @@
                         <div>Issued by The Linux Foundation</div>
                     </div>
                 </div>
-            </article>
+            </article>            
+
+            <article class="panel is-primary" v-if="y2023 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103415.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Architecture Blueprints</div>
+                        <div class="is-size-4"> Ein Leitfaden zur Konstruktion von Softwaresystemen mit Java Spring, .NET, ADF, Forms und SOA</div>
+                        <div class="has-text-grey">Authors:  Daniel Liebhart, Guido Schmutz, Marcel Lattmann, Markus Heinisch, Michael Könings, Mischa Kölliker, Perry Pakull, Peter Welkenbach</div>
+                    </div>
+                </div>
+            </article>              
 
             <!-- 2022 -->
 
@@ -426,7 +450,63 @@
                 </div>
             </article>
 
+            <article class="panel is-primary" v-if="y2022 && book && csharp">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103405.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">C# 10 and .NET 6</div>
+                        <div class="is-size-4">Modern Cross-Platform Development</div>
+                        <div class="has-text-grey">Authors:  Mark J. Price</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-primary" v-if="y2022 && book && (ax || erp)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103446.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Microsoft Dynamics AX 2009 Development Cookbook</div>
+                        <div class="is-size-4"></div>
+                        <div class="has-text-grey">Authors: Mindaugas Pocius</div>
+                    </div>
+                </div>
+            </article>  
+
             <!-- 2021 -->
+
+            <article class="panel is-primary" v-if="y2021 && book && (architecture || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102024.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Programming Web Services with SOAP</div>
+                        <div class="is-size-4">Building Distributed Applications</div>
+                        <div class="has-text-grey">Authors: Doug Tidwell, James Snell, Pavel Kulchenko</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-primary" v-if="y2021 && book && (ax || erp)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103438.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Microsoft Dynamics Ax 2009 Programming</div>
+                        <div class="is-size-4">Getting Started: Get To Grips With Synamics AX 2009 Development Quickly To Build Reliable And Robust Business Applications</div>
+                        <div class="has-text-grey">Authors: Erlend Dalen</div>
+                    </div>
+                </div>
+            </article>              
 
             <article class="panel is-primary" v-if="y2021 && book && (projectManagement || scrum)">
                 <p class="panel-heading">Book</p>
@@ -457,6 +537,20 @@
                     </div>
                 </div>
             </article>               
+
+            <article class="panel is-primary" v-if="y2020 && book && (javascript || webDevelopment)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102032.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Aurelia in Action</div>
+                        <div class="is-size-4"></div>
+                        <div class="has-text-grey">Authors: Sean Hunter</div>                        
+                    </div>
+                </div>
+            </article>                  
 
             <article class="panel is-primary" v-if="y2020 && book && (architecture || softwareEngineering)">
                 <p class="panel-heading">Book</p>
@@ -851,6 +945,7 @@
             data() {
                 return {
                     architecture: true,
+                    ax: true,
                     azure: true,
                     book: true,
                     certification: true,
@@ -860,6 +955,7 @@
                     cybersecurity: true,
                     ddd: true,
                     english: true,
+                    erp: true,
                     java: true,
                     javascript: true,
                     kotlin: true,
