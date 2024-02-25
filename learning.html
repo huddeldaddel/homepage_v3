@@ -484,6 +484,20 @@
                 </div>
             </article>
 
+            <article class="panel is-primary" v-if="y2017 && book && cloudComputing">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101602.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Serverless Computing</div>
+                        <div class="is-size-3">in der AWS Cloud</div>
+                        <div class="has-text-grey">Authors: Niko Köbler</div>                        
+                    </div>
+                </div>
+            </article>            
+
             <article class="panel is-warning" v-if="y2017 && course && (javascript || webDevelopment)">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
@@ -539,7 +553,7 @@
                     </div>
                 </div>
             </article>
-
+            
             <article class="panel is-link" v-if="y2012 && certification && (java || softwareEngineering)">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
