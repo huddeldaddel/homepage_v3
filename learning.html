@@ -296,7 +296,7 @@
 
                             <label class="checkbox">
                                 <input type="checkbox" v-model="javascript">
-                                Java
+                                JavaScript / TypeScript
                             </label>
 
                             <label class="checkbox">
@@ -315,6 +315,16 @@
                             </label>
 
                             <label class="checkbox">
+                                <input type="checkbox" v-model="projectManagement">
+                                Project Management
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="scrum">
+                                Scrum
+                            </label>
+
+                            <label class="checkbox">
                                 <input type="checkbox" v-model="softwareEngineering">
                                 Software Engineering
                             </label>
@@ -327,6 +337,11 @@
                             <label class="checkbox">
                                 <input type="checkbox" v-model="togaf">
                                 TOGAF
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" v-model="uml">
+                                UML
                             </label>
 
                             <label class="checkbox">
@@ -408,7 +423,21 @@
 
             <!-- 2021 -->
 
-            <!-- 2010 -->
+            <article class="panel is-primary" v-if="y2021 && book && (projectManagement || scrum)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101820.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Agile Project Management with Scrum</div>
+                        <div class="is-size-4"></div>
+                        <div class="has-text-grey">Authors: Ken Schwaber</div>
+                    </div>
+                </div>
+            </article>  
+
+            <!-- 2020 -->
 
             <article class="panel is-primary" v-if="y2020 && book && (architecture || softwareEngineering)">
                 <p class="panel-heading">Book</p>
@@ -440,7 +469,35 @@
                 </div>
             </article>
 
+            <article class="panel is-primary" v-if="y2019 && book && java">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101725.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Spring Boot 2</div>
+                        <div class="is-size-4">Moderne Softwareentwicklung mit Spring 5</div>
+                        <div class="has-text-grey">Authors: Michael Simons</div>
+                    </div>
+                </div>
+            </article>  
+
             <!-- 2018 -->
+
+            <article class="panel is-primary" v-if="y2018 && book && management">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101803.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Agile Unternehmen</div>
+                        <div class="is-size-4">Veränderungsprozesse gestalten, agile Prinzipien verankern, Selbstorganisation und neue Führungsstile etablieren</div>
+                        <div class="has-text-grey">Authors: Jürgen Hoffmann, Stefan Roock</div>
+                    </div>
+                </div>
+            </article>  
 
             <article class="panel is-link" v-if="y2018 && certification && management">
                 <p class="panel-heading">Certification</p>
@@ -638,6 +695,20 @@
 
             <!-- 2011 -->
             
+            <article class="panel is-primary" v-if="y2011 && book && (uml || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101717.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">UML 2 kompakt</div>
+                        <div class="is-size-4">mit Checklisten</div>
+                        <div class="has-text-grey">Authors: Heide Balzert</div>
+                    </div>
+                </div>
+            </article>    
+
             <!-- 2010 -->
 
             <article class="panel is-link" v-if="y2010 && certification && other">
@@ -676,9 +747,12 @@
                     kotlin: true,
                     management: true,
                     other: true,
+                    projectManagement: true, 
+                    scrum: true,
                     softwareEngineering: true,
                     testing: true,
                     togaf: true,
+                    uml: true,
                     webDevelopment: true,
                     y2024: true,
                     y2023: true,
