@@ -285,6 +285,11 @@
                             </label>
 
                             <label class="checkbox">
+                                <input type="checkbox" v-model="ddd">
+                                Domain Driven Design
+                            </label>
+
+                            <label class="checkbox">
                                 <input type="checkbox" v-model="english">
                                 English
                             </label>
@@ -437,7 +442,21 @@
                 </div>
             </article>  
 
-            <!-- 2020 -->
+            <!-- 2020 -->                   
+
+            <article class="panel is-primary" v-if="y2020 && book && (architecture || ddd || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101957.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Domain-Driven Design</div>
+                        <div class="is-size-4">Tackling Complexity in the Heart of Software</div>
+                        <div class="has-text-grey">Authors: Eric Evans</div>                        
+                    </div>
+                </div>
+            </article>               
 
             <article class="panel is-primary" v-if="y2020 && book && (architecture || softwareEngineering)">
                 <p class="panel-heading">Book</p>
@@ -473,6 +492,20 @@
                 <p class="panel-heading">Book</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101913.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Evaluating Software Architectures</div>
+                        <div class="is-size-4">Methods and Case Studies</div>
+                        <div class="has-text-grey">Authors: Paul Clements, Rick Kazman, Mark Klein</div>
+                    </div>
+                </div>
+            </article>              
+
+            <article class="panel is-primary" v-if="y2019 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
                         <img src="images/book_IMG20240224101846.png">
                     </div>
                     <div class="column">
@@ -495,7 +528,21 @@
                         <div>Issued by ISAQB</div>
                     </div>
                 </div>
-            </article>
+            </article>            
+
+            <article class="panel is-primary" v-if="y2019 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102013.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Zertifizierung für Softwarearchitekten</div>
+                        <div class="is-size-4">Ihr Weg zur iSAQB CPSA-F-Prüfung</div>
+                        <div class="has-text-grey">Authors: Gernot Starke, Peter Hruschka</div>
+                    </div>
+                </div>
+            </article>  
 
             <article class="panel is-primary" v-if="y2019 && book && java">
                 <p class="panel-heading">Book</p>
@@ -510,6 +557,20 @@
                     </div>
                 </div>
             </article>  
+
+            <article class="panel is-primary" v-if="y2019 && book && (architecture || ddd || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101904.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Domain-Driven Design kompakt</div>
+                        <div class="is-size-4">Effective Practices for eXtreme Programming and the Unified Process</div>
+                        <div class="has-text-grey">Authors: Vaughn Vernon</div>                        
+                    </div>
+                </div>
+            </article>         
 
             <!-- 2018 -->          
 
@@ -797,6 +858,7 @@
                     csharp: true,
                     course: true,
                     cybersecurity: true,
+                    ddd: true,
                     english: true,
                     java: true,
                     javascript: true,
