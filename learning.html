@@ -310,11 +310,6 @@
                             </label>
 
                             <label class="checkbox">
-                                <input type="checkbox" v-model="kotlin">
-                                Kotlin
-                            </label>
-
-                            <label class="checkbox">
                                 <input type="checkbox" v-model="management">
                                 Management
                             </label>
@@ -506,21 +501,7 @@
                         <div class="has-text-grey">Authors: Erlend Dalen</div>
                     </div>
                 </div>
-            </article>              
-
-            <article class="panel is-primary" v-if="y2021 && book && (projectManagement || scrum)">
-                <p class="panel-heading">Book</p>
-                <div class="panel-block columns">
-                    <div class="column is-one-third">
-                        <img src="images/book_IMG20240224101820.png">
-                    </div>
-                    <div class="column">
-                        <div class="is-size-2">Agile Project Management with Scrum</div>
-                        <div class="is-size-4"></div>
-                        <div class="has-text-grey">Authors: Ken Schwaber</div>
-                    </div>
-                </div>
-            </article>  
+            </article>                           
 
             <!-- 2020 -->                   
 
@@ -922,6 +903,20 @@
 
             <!-- 2010 -->
 
+            <article class="panel is-primary" v-if="y2010 && book && (projectManagement || scrum)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101820.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Agile Project Management with Scrum</div>
+                        <div class="is-size-4"></div>
+                        <div class="has-text-grey">Authors: Ken Schwaber</div>
+                    </div>
+                </div>
+            </article> 
+
             <article class="panel is-link" v-if="y2010 && certification && other">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
@@ -958,7 +953,6 @@
                     erp: true,
                     java: true,
                     javascript: true,
-                    kotlin: true,
                     management: true,
                     other: true,
                     projectManagement: true, 
