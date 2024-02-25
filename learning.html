@@ -453,7 +453,35 @@
                 </div>
             </article>    
 
+            <article class="panel is-primary" v-if="y2020 && book && (architecture || java || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101837.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">API-Design</div>
+                        <div class="is-size-4">Praxishandbuch für Java- und Webservice-Entwickler</div>
+                        <div class="has-text-grey">Authors: Kai Spichale</div>
+                    </div>
+                </div>
+            </article>  
+
             <!-- 2019 -->
+
+            <article class="panel is-primary" v-if="y2019 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101846.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Knigge für Softwarearchitekten</div>
+                        <div class="is-size-4"></div>
+                        <div class="has-text-grey">Authors: Peter Hruschka, Gernot Starke</div>
+                    </div>
+                </div>
+            </article>  
 
             <article class="panel is-link" v-if="y2019 && certification && architecture">
                 <p class="panel-heading">Certification</p>
@@ -483,7 +511,7 @@
                 </div>
             </article>  
 
-            <!-- 2018 -->
+            <!-- 2018 -->          
 
             <article class="panel is-primary" v-if="y2018 && book && management">
                 <p class="panel-heading">Book</p>
@@ -513,6 +541,20 @@
                 </div>
             </article>
 
+            <article class="panel is-primary" v-if="y2018 && book && java">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101828.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Java 9</div>
+                        <div class="is-size-4">Die Neuerungen: Syntax- und API-Erweiterungen und Modularisierung im Überblick</div>
+                        <div class="has-text-grey">Authors: Michael Inden</div>
+                    </div>
+                </div>
+            </article>  
+
             <article class="panel is-warning" v-if="y2018 && course && cloudComputing">
                 <p class="panel-heading">Online Course</p>
                 <div class="panel-block columns">
@@ -537,6 +579,20 @@
                         <div class="is-size-2">Management Skills: Essentials for The New Manager</div>
                         <div>Completed in 2018</div>
                         <div>Udemy</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2018 && book && (management || other)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101855.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Barbarians to Bureaucrats</div>
+                        <div class="is-size-4">Corporate Life Cycle Strategies: Corporate Life Cycle Strategies</div>
+                        <div class="has-text-grey">Authors: Lawrence M. Miller</div>
                     </div>
                 </div>
             </article>
