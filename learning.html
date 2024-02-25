@@ -400,6 +400,20 @@
                 </div>
             </article>
 
+            <article class="panel is-primary" v-if="y2020 && book && (architecture || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101646.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-2">Agile Modeling</div>
+                        <div class="is-size-4">Effective Practices for eXtreme Programming and the Unified Process</div>
+                        <div class="has-text-grey">Authors: Scott W. Ambler</div>                        
+                    </div>
+                </div>
+            </article>    
+
             <article class="panel is-link" v-if="y2019 && certification && architecture">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
@@ -492,7 +506,7 @@
                     </div>
                     <div class="column">
                         <div class="is-size-2">Serverless Computing</div>
-                        <div class="is-size-3">in der AWS Cloud</div>
+                        <div class="is-size-4">in der AWS Cloud</div>
                         <div class="has-text-grey">Authors: Niko Köbler</div>                        
                     </div>
                 </div>
