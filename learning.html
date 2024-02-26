@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <div class="columns has-same-height is-gapless">
+        <div class="columns is-gapless">
             <div class="column is-one-fifth">
                 <!-- Types -->
                 <div class="card">
@@ -300,6 +300,11 @@
                             </label>
 
                             <label class="checkbox">
+                                <input type="checkbox" v-model="golang">
+                                Go
+                            </label>
+
+                            <label class="checkbox">
                                 <input type="checkbox" v-model="java">
                                 Java
                             </label>
@@ -475,6 +480,20 @@
 
             <!-- 2021 -->
 
+            <article class="panel is-primary" v-if="y2021 && book && java">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102111.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Java</div>
+                        <div>Die Neuerungen in Version 9 bis 14: Modularisierung, Syntax- und API-Erweiterungen</div>
+                        <div class="has-text-grey">Authors: Michael Inden</div>
+                    </div>
+                </div>
+            </article>
+
             <article class="panel is-primary" v-if="y2021 && book && (architecture || softwareEngineering)">
                 <p class="panel-heading">Book</p>
                 <div class="panel-block columns">
@@ -504,6 +523,34 @@
             </article>                           
 
             <!-- 2020 -->                   
+            
+            <article class="panel is-primary" v-if="y2020 && book && (softwareEngineering || other)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102056.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Specification by Example</div>
+                        <div>How Successful Teams Deliver the Right Software</div>
+                        <div class="has-text-grey">Authors: Gojko Adzic</div>
+                    </div>
+                </div>
+            </article> 
+
+            <article class="panel is-primary" v-if="y2020 && book && uml">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102048.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">UML Distilled</div>
+                        <div>A Brief Guide to the Standard Object Modeling Language</div>
+                        <div class="has-text-grey">Authors: Martin Fowler</div>
+                    </div>
+                </div>
+            </article> 
 
             <article class="panel is-primary" v-if="y2020 && book && (architecture || ddd || softwareEngineering)">
                 <p class="panel-heading">Book</p>
@@ -518,6 +565,20 @@
                     </div>
                 </div>
             </article>               
+
+            <article class="panel is-primary" v-if="y2020 && book && golang">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102040.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">The Go Programming Language</div>
+                        <div></div>
+                        <div class="has-text-grey">Authors: Alan A. A. Donovan, Brian W. Kernighan</div>                        
+                    </div>
+                </div>
+            </article> 
 
             <article class="panel is-primary" v-if="y2020 && book && (javascript || webDevelopment)">
                 <p class="panel-heading">Book</p>
@@ -546,20 +607,20 @@
                     </div>
                 </div>
             </article>    
-
-            <article class="panel is-primary" v-if="y2020 && book && (architecture || java || softwareEngineering)">
+            
+            <article class="panel is-primary" v-if="y2020 && book && testing">
                 <p class="panel-heading">Book</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
-                        <img src="images/book_IMG20240224101837.png">
+                        <img src="images/book_IMG20240224102104.png">
                     </div>
                     <div class="column">
-                        <div class="is-size-4">API-Design</div>
-                        <div>Praxishandbuch für Java- und Webservice-Entwickler</div>
-                        <div class="has-text-grey">Authors: Kai Spichale</div>
+                        <div class="is-size-4">Lessons Learned in Software Testing</div>
+                        <div>A Context-Driven Approach</div>
+                        <div class="has-text-grey">Authors: Cem Kaner, James Bach, Bret Pettichord</div>
                     </div>
                 </div>
-            </article>  
+            </article>            
 
             <!-- 2019 -->
 
@@ -614,6 +675,20 @@
                     <div class="column">
                         <div class="is-size-4">Zertifizierung für Softwarearchitekten</div>
                         <div>Ihr Weg zur iSAQB CPSA-F-Prüfung</div>
+                        <div class="has-text-grey">Authors: Gernot Starke, Peter Hruschka</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-primary" v-if="y2019 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102159.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">arc42 in Aktion</div>
+                        <div>Praktische Tipps zur Architekturdokumentation</div>
                         <div class="has-text-grey">Authors: Gernot Starke, Peter Hruschka</div>
                     </div>
                 </div>
@@ -731,7 +806,7 @@
                         <div class="has-text-grey">Authors: Lawrence M. Miller</div>
                     </div>
                 </div>
-            </article>
+            </article>            
 
             <article class="panel is-warning" v-if="y2018 && course && (java || testing)">
                 <p class="panel-heading">Online Course</p>
@@ -776,6 +851,20 @@
                     </div>
                 </div>
             </article>            
+
+            <article class="panel is-primary" v-if="y2017 && book && (architecture || java || softwareEngineering)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224101837.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">API-Design</div>
+                        <div>Praxishandbuch für Java- und Webservice-Entwickler</div>
+                        <div class="has-text-grey">Authors: Kai Spichale</div>
+                    </div>
+                </div>
+            </article>
 
             <article class="panel is-warning" v-if="y2017 && course && (javascript || webDevelopment)">
                 <p class="panel-heading">Online Course</p>
@@ -951,6 +1040,7 @@
                     ddd: true,
                     english: true,
                     erp: true,
+                    golang: true,
                     java: true,
                     javascript: true,
                     management: true,
