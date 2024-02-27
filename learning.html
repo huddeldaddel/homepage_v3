@@ -390,6 +390,20 @@
                 </div>
             </article>
 
+            <article class="panel is-primary" v-if="y2024 && book && golang">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240227165810.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Microservices mit Go</div>
+                        <div> Konzepte, Werkzeuge, Best Practices. Das Praxisbuch für Entwickler</div>
+                        <div class="has-text-grey">Authors: Kristian Köhler</div>
+                    </div>
+                </div>
+            </article>  
+
             <!-- 2023 -->
 
             <article class="panel is-link" v-if="y2023 && certification && (architecture || togaf)">
@@ -406,6 +420,20 @@
                 </div>
             </article>
 
+            <article class="panel is-warning" v-if="y2023 && course && togaf">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_UC-5db8453e-02d5-4139-92e5-5e8d80677411.jpg">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Standard 9.2 - Part 2 Certified Enterprise Architect Course</div>
+                        <div>Completed in 2023</div>
+                        <div class="has-text-grey">Udemy</div>
+                    </div>
+                </div>
+            </article>
+
             <article class="panel is-link" v-if="y2023 && certification && softwareEngineering">
                 <p class="panel-heading">Certification</p>
                 <div class="panel-block columns">
@@ -418,7 +446,21 @@
                         <div class="has-text-grey">Issued by The Linux Foundation</div>
                     </div>
                 </div>
-            </article>            
+            </article>
+
+            <article class="panel is-warning" v-if="y2023 && course && togaf">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_UC-dfaa43f6-3bc4-4eb0-b953-cf563407dd9b.jpg">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Standard 9.2 - Part 1 Foundation Enterprise Architect Course</div>
+                        <div>Completed in 2023</div>
+                        <div class="has-text-grey">Udemy</div>
+                    </div>
+                </div>
+            </article>
 
             <article class="panel is-primary" v-if="y2023 && book && architecture">
                 <p class="panel-heading">Book</p>
@@ -428,8 +470,8 @@
                     </div>
                     <div class="column">
                         <div class="is-size-4">Architecture Blueprints</div>
-                        <div> Ein Leitfaden zur Konstruktion von Softwaresystemen mit Java Spring, .NET, ADF, Forms und SOA</div>
-                        <div class="has-text-grey">Authors:  Daniel Liebhart, Guido Schmutz, Marcel Lattmann, Markus Heinisch, Michael Könings, Mischa Kölliker, Perry Pakull, Peter Welkenbach</div>
+                        <div>Ein Leitfaden zur Konstruktion von Softwaresystemen mit Java Spring, .NET, ADF, Forms und SOA</div>
+                        <div class="has-text-grey">Authors: Daniel Liebhart, Guido Schmutz, Marcel Lattmann, Markus Heinisch, Michael Könings, Mischa Kölliker, Perry Pakull, Peter Welkenbach</div>
                     </div>
                 </div>
             </article>              
@@ -446,6 +488,20 @@
                         <div class="is-size-4">Microsoft Certified: Azure Fundamentals</div>
                         <div>Certified since 2022</div>
                         <div class="has-text-grey">Issued by Microsoft</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="y2022 && course && cloudComputing">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_UC-0311b5b3-a4ff-4d82-8c90-cb50f6e3ec8c.jpg">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">AZ-900: Microsoft Azure Fundamentals</div>
+                        <div>Completed in 2022</div>
+                        <div class="has-text-grey">Udemy</div>
                     </div>
                 </div>
             </article>
@@ -478,6 +534,20 @@
                 </div>
             </article>  
 
+            <article class="panel is-primary" v-if="y2022 && book && testing">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240227165727.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Basiswissen Softwaretest</div>
+                        <div>Aus- und Weiterbildung zum Certified Tester – Foundation Level nach ISTQB®-Standard</div>
+                        <div class="has-text-grey">Authors: Andreas Spillner, Tilo Linz</div>
+                    </div>
+                </div>
+            </article>
+
             <article class="panel is-primary" v-if="y2022 && book && (ax || erp)">
                 <p class="panel-heading">Book</p>
                 <div class="panel-block columns">
@@ -488,6 +558,20 @@
                         <div class="is-size-4">Microsoft Dynamics AX 2009 Development Cookbook</div>
                         <div></div>
                         <div class="has-text-grey">Authors: Mindaugas Pocius</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-primary" v-if="y2022 && book && other">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240227165800.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Icinga 2</div>
+                        <div>Ein praktischer Einstieg ins Monitoring</div>
+                        <div class="has-text-grey">Authors: Lennart Betz, Thomas Widhalm</div>
                     </div>
                 </div>
             </article>  
