@@ -390,7 +390,35 @@
                 </div>
             </article>
 
+            <article class="panel is-primary" v-if="y2024 && book && golang">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240227165810.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Microservices mit Go</div>
+                        <div> Konzepte, Werkzeuge, Best Practices. Das Praxisbuch für Entwickler</div>
+                        <div class="has-text-grey">Authors: Kristian Köhler</div>
+                    </div>
+                </div>
+            </article>  
+
             <!-- 2023 -->
+
+            <article class="panel is-primary" v-if="y2023 && book && golang">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103114.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Microservices with Go</div>
+                        <div>Building scalable and reliable microservices with Go</div>
+                        <div class="has-text-grey">Authors: Alexander Shuiskov</div>
+                    </div>
+                </div>
+            </article>
 
             <article class="panel is-link" v-if="y2023 && certification && (architecture || togaf)">
                 <p class="panel-heading">Certification</p>
@@ -402,6 +430,34 @@
                         <div class="is-size-4">TOGAF 9 Certified</div>
                         <div>Certified since 2023</div>
                         <div class="has-text-grey">Issued by The Open Group</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2023 && book && (architecture || togaf)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103331.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Course in a Book for Passing the Togaf 9 Foundation Part 2 Certified Exam</div>
+                        <div>The How to Pass on Your First Try</div>
+                        <div class="has-text-grey">Authors: William Manning</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="y2023 && course && (architecture || togaf)">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_UC-5db8453e-02d5-4139-92e5-5e8d80677411.jpg">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Standard 9.2 - Part 2 Certified Enterprise Architect Course</div>
+                        <div>Completed in 2023</div>
+                        <div class="has-text-grey">Udemy</div>
                     </div>
                 </div>
             </article>
@@ -424,12 +480,40 @@
                 <p class="panel-heading">Book</p>
                 <div class="panel-block columns">
                     <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103323.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Introduction to SparxSystems Enterprise Architect</div>
+                        <div>Documenting Enterprise Architecture in the Most Affordable Enterprise Architecture Suite</div>
+                        <div class="has-text-grey">Authors: Peter Doomen</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="y2023 && course && togaf">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_UC-dfaa43f6-3bc4-4eb0-b953-cf563407dd9b.jpg">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Standard 9.2 - Part 1 Foundation Enterprise Architect Course</div>
+                        <div>Completed in 2023</div>
+                        <div class="has-text-grey">Udemy</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2023 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
                         <img src="images/book_IMG20240224103415.png">
                     </div>
                     <div class="column">
                         <div class="is-size-4">Architecture Blueprints</div>
-                        <div> Ein Leitfaden zur Konstruktion von Softwaresystemen mit Java Spring, .NET, ADF, Forms und SOA</div>
-                        <div class="has-text-grey">Authors:  Daniel Liebhart, Guido Schmutz, Marcel Lattmann, Markus Heinisch, Michael Könings, Mischa Kölliker, Perry Pakull, Peter Welkenbach</div>
+                        <div>Ein Leitfaden zur Konstruktion von Softwaresystemen mit Java Spring, .NET, ADF, Forms und SOA</div>
+                        <div class="has-text-grey">Authors: Daniel Liebhart, Guido Schmutz, Marcel Lattmann, Markus Heinisch, Michael Könings, Mischa Kölliker, Perry Pakull, Peter Welkenbach</div>
                     </div>
                 </div>
             </article>              
@@ -446,6 +530,20 @@
                         <div class="is-size-4">Microsoft Certified: Azure Fundamentals</div>
                         <div>Certified since 2022</div>
                         <div class="has-text-grey">Issued by Microsoft</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-warning" v-if="y2022 && course && (azure || cloudComputing)">
+                <p class="panel-heading">Online Course</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/cert_UC-0311b5b3-a4ff-4d82-8c90-cb50f6e3ec8c.jpg">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">AZ-900: Microsoft Azure Fundamentals</div>
+                        <div>Completed in 2022</div>
+                        <div class="has-text-grey">Udemy</div>
                     </div>
                 </div>
             </article>
@@ -478,6 +576,20 @@
                 </div>
             </article>  
 
+            <article class="panel is-primary" v-if="y2022 && book && testing">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240227165727.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Basiswissen Softwaretest</div>
+                        <div>Aus- und Weiterbildung zum Certified Tester – Foundation Level nach ISTQB®-Standard</div>
+                        <div class="has-text-grey">Authors: Andreas Spillner, Tilo Linz</div>
+                    </div>
+                </div>
+            </article>
+
             <article class="panel is-primary" v-if="y2022 && book && (ax || erp)">
                 <p class="panel-heading">Book</p>
                 <div class="panel-block columns">
@@ -492,7 +604,77 @@
                 </div>
             </article>  
 
+            <article class="panel is-primary" v-if="y2022 && book && other">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103038.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">System-Architekturen für verteilte Anwendungen</div>
+                        <div>Client-Server, Multi-Tier, SOA, Event-Driven Architecture, P2P, Grid, Web 2.0</div>
+                        <div class="has-text-grey">Authors: Jürgen Dunkel, Andreas Eberhart, Stefan Fischer, Carsten Kleiner, Arne Koschel</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2022 && book && other">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240227165800.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Icinga 2</div>
+                        <div>Ein praktischer Einstieg ins Monitoring</div>
+                        <div class="has-text-grey">Authors: Lennart Betz, Thomas Widhalm</div>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="panel is-primary" v-if="y2022 && book && (architecture && other)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102759.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Soa Patterns With Biztalk Server 2009</div>
+                        <div></div>
+                        <div class="has-text-grey">Authors: Richard Seroter</div>
+                    </div>
+                </div>
+            </article>
+
             <!-- 2021 -->
+
+            <article class="panel is-primary" v-if="y2021 && book && csharp">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102831.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Windows Communication Foundation (.NET WCF)</div>
+                        <div>Verteilte Systeme und Anwendungskopplung mit .NET</div>
+                        <div class="has-text-grey">Authors: Matthias Fischer, Jörg Krause</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2021 && book && csharp">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102841.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Programming Indigo</div>
+                        <div>The Code Name for the Unified Framework for Building Service-Oriented Applications on the Microsoft® Windows® Platform</div>
+                        <div class="has-text-grey">Authors: David Pallmann</div>
+                    </div>
+                </div>
+            </article>
 
             <article class="panel is-primary" v-if="y2021 && book && java">
                 <p class="panel-heading">Book</p>
@@ -534,10 +716,38 @@
                         <div class="has-text-grey">Authors: Erlend Dalen</div>
                     </div>
                 </div>
-            </article>                           
+            </article>
+
+            <article class="panel is-primary" v-if="y2021 && book && architecture">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103655.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Effektive Software-Architekturen</div>
+                        <div>Ein praktischer Leitfaden</div>
+                        <div class="has-text-grey">Authors: Gernot Starke</div>
+                    </div>
+                </div>
+            </article>
 
             <!-- 2020 -->                   
             
+            <article class="panel is-primary" v-if="y2020 && book && (softwareEngineering || other)">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103125.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Inside Microsoft Dynamics® AX 2009</div>
+                        <div></div>
+                        <div class="has-text-grey">Authors: Lars Dragheim Olsen, Michael Fruergaard Pontoppidan, Tomasz Kaminski, Deepak Kumar, Hans Jorgen Skovgaard</div>
+                    </div>
+                </div>
+            </article>
+
             <article class="panel is-primary" v-if="y2020 && book && (softwareEngineering || other)">
                 <p class="panel-heading">Book</p>
                 <div class="panel-block columns">
@@ -652,6 +862,48 @@
 
             <!-- 2019 -->
 
+            <article class="panel is-primary" v-if="y2019 && book && management">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103625.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Team Topologies</div>
+                        <div>Organizing Business and Technology Teams for Fast Flow</div>
+                        <div class="has-text-grey">Authors: Matthew Skelton, Manuel Pais, Ruth Malan</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2019 && book && javascript">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103020.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Node.js</div>
+                        <div>Rezepte und Lösungen: Das Nachschlagewerk für den Praxisalltag. Über 100 Rezepte zu dem JavaScript-Framework</div>
+                        <div class="has-text-grey">Authors: Philip Ackermann</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel is-primary" v-if="y2019 && book && other">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103354.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">The Essential HR Handbook</div>
+                        <div>A Quick and Handy Resource for Any Manager or HR Professional</div>
+                        <div class="has-text-grey">Authors: Sharon Armstrong, Barbara Mitchell</div>
+                    </div>
+                </div>
+            </article>
+
             <article class="panel is-primary" v-if="y2019 && book && architecture">
                 <p class="panel-heading">Book</p>
                 <div class="panel-block columns">
@@ -664,7 +916,7 @@
                         <div class="has-text-grey">Authors: Paul Clements, Rick Kazman, Mark Klein</div>
                     </div>
                 </div>
-            </article>              
+            </article>
 
             <article class="panel is-primary" v-if="y2019 && book && architecture">
                 <p class="panel-heading">Book</p>
@@ -1014,6 +1266,20 @@
             
             <!-- 2013 -->
 
+            <article class="panel is-primary" v-if="y2013 && book && softwareEngineering">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224103047.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Software Engineering</div>
+                        <div>Mit UML und dem Unified Process</div>
+                        <div class="has-text-grey">Authors: Wolfgang Zuser, Thomas Grechenig, Monika Köhle</div>
+                    </div>
+                </div>
+            </article>
+
             <!-- 2012 -->
 
             <article class="panel is-link" v-if="y2012 && certification && (java || softwareEngineering)">
@@ -1030,8 +1296,36 @@
                 </div>
             </article>
 
+            <article class="panel is-primary" v-if="y2012 && book && java">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102859.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">Rich Client Programming</div>
+                        <div>Plugging into the NetBeans Platform</div>
+                        <div class="has-text-grey">Authors: Tim Boudreau, Jaroslav Tulach, Geertjan Wielenga</div>
+                    </div>
+                </div>
+            </article>
+
             <!-- 2011 -->
             
+            <article class="panel is-primary" v-if="y2011 && book && java">
+                <p class="panel-heading">Book</p>
+                <div class="panel-block columns">
+                    <div class="column is-one-third">
+                        <img src="images/book_IMG20240224102622.png">
+                    </div>
+                    <div class="column">
+                        <div class="is-size-4">NetBeans Platform 7</div>
+                        <div>Das umfassende Handbuch</div>
+                        <div class="has-text-grey">Authors: Heiko Böck</div>
+                    </div>
+                </div>
+            </article>
+
             <article class="panel is-primary" v-if="y2011 && book && (uml || softwareEngineering)">
                 <p class="panel-heading">Book</p>
                 <div class="panel-block columns">
@@ -1091,7 +1385,7 @@
                     certification: true,
                     cloudComputing: true,
                     csharp: true,
-                    course: true,
+                    course: false,
                     cybersecurity: true,
                     ddd: true,
                     english: true,
